@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team766.robot;
 
+import org.usfirst.frc.team766.robot.commands.CameraFeed;
 import org.usfirst.frc.team766.robot.commands.CommandBase;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -23,7 +24,7 @@ public class Brute extends IterativeRobot {
      */
     public void robotInit() {
     	CommandBase.init();
-        // instantiate the command used for the autonomous period
+        
     }
 	
 	public void disabledPeriodic() {
@@ -43,10 +44,7 @@ public class Brute extends IterativeRobot {
     }
 
     public void teleopInit() {
-		// This makes sure that the autonomous stops running when
-        // teleop starts running. If you want the autonomous to 
-        // continue until interrupted by another command, remove
-        // this line or comment it out.
+		CameraFeed.getInstance().start();//might need to go somewhere else b/c might throw exceptions
     }
 
     /**

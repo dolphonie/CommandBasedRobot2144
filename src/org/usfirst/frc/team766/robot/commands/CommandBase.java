@@ -2,6 +2,7 @@ package org.usfirst.frc.team766.robot.commands;
 
 import org.usfirst.frc.team766.robot.OI;
 import org.usfirst.frc.team766.robot.subsystems.Arm;
+import org.usfirst.frc.team766.robot.subsystems.CameraPanTilt;
 import org.usfirst.frc.team766.robot.subsystems.Drive;
 import org.usfirst.frc.team766.robot.subsystems.Elevator;
 
@@ -14,7 +15,7 @@ public abstract class CommandBase extends Command {
 	public static Drive drive;
 	public static Arm arm;
 	public static Elevator elevator;
-
+	public static CameraPanTilt cameraPanTilt;
 	public static OI oi;
 
 	public static void init() {
