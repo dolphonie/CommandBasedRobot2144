@@ -1,6 +1,6 @@
-package org.usfirst.frc.team766.robot.subsystems;
+package org.usfirst.frc.team2144.robot.subsystems;
 
-import org.usfirst.frc.team766.robot.commands.JoystickElevator;
+import org.usfirst.frc.team2144.robot.commands.JoystickElevator;
 
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Talon;
@@ -19,9 +19,9 @@ public class Elevator extends Subsystem {
 	public Elevator() {
 		winch = new Talon(4);
 		winchtopL = new DigitalInput(0);
-    	winchtopR = new DigitalInput(2);
-    	winchbottomL = new DigitalInput(1);
-    	winchbottomR = new DigitalInput(3);
+		winchtopR = new DigitalInput(2);
+		winchbottomL = new DigitalInput(1);
+		winchbottomR = new DigitalInput(3);
 	}
 
 	public void initDefaultCommand() {
@@ -31,20 +31,20 @@ public class Elevator extends Subsystem {
 	public void setSpeed(double speed) {
 		winch.set(speed);
 	}
-	
-	public boolean getTopLeftLimit(){
+
+	public boolean getTopLeftLimit() {
 		return winchtopL.get();
 	}
-	
-	public boolean getTopRightLimit(){
+
+	public boolean getTopRightLimit() {
 		return winchtopR.get();
 	}
-	
-	public boolean getBottomLeftLimit(){
+
+	public boolean getBottomLeftLimit() {
 		return winchbottomL.get();
 	}
-	
-	public boolean getBottomRightLimit(){
+
+	public boolean getBottomRightLimit() {
 		return winchbottomR.get();
 	}
 }
