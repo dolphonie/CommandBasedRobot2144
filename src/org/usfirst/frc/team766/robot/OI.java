@@ -18,7 +18,6 @@ public class OI {
 			mecanumRight = new JoystickButton(jLeft, 5),
 			openArm = new JoystickButton(jRight, 3),
 			closeArm = new JoystickButton(jRight, 4),
-			safetyOverride = new JoystickButton(jRight, 7),
 			cameraReset = new JoystickButton(jRight,1),
 			stopOverride = new JoystickButton(jRight,7);
 
