@@ -40,8 +40,9 @@ public class CameraFeed extends Command {
 			NIVision.imaqFlip(image, image, NIVision.FlipAxis.HORIZONTAL_AXIS);
 			NIVision.imaqFlip(image, image, NIVision.FlipAxis.VERTICAL_AXIS);
 			CameraServer.getInstance().setImage(image);
-		} else	
+		} else {
 			System.out.println("Camera failed to get image");
+		}
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
