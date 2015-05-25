@@ -1,10 +1,10 @@
-package org.usfirst.frc.team766.robot.commands;
+package org.usfirst.frc.team2144.robot.commands;
 
-import org.usfirst.frc.team766.robot.OI;
-import org.usfirst.frc.team766.robot.subsystems.Arm;
-import org.usfirst.frc.team766.robot.subsystems.CameraPanTilt;
-import org.usfirst.frc.team766.robot.subsystems.Drive;
-import org.usfirst.frc.team766.robot.subsystems.Elevator;
+import org.usfirst.frc.team2144.robot.OI;
+import org.usfirst.frc.team2144.robot.subsystems.Arm;
+import org.usfirst.frc.team2144.robot.subsystems.CameraPanTilt;
+import org.usfirst.frc.team2144.robot.subsystems.Drive;
+import org.usfirst.frc.team2144.robot.subsystems.Elevator;
 
 import edu.wpi.first.wpilibj.command.Command;
 

@@ -1,6 +1,6 @@
-package org.usfirst.frc.team766.robot.subsystems;
+package org.usfirst.frc.team2144.robot.subsystems;
 
-import org.usfirst.frc.team766.robot.commands.JoyStickDrive;
+import org.usfirst.frc.team2144.robot.commands.JoyStickDrive;
 
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Talon;
@@ -19,10 +19,10 @@ public class Drive extends Subsystem {
 	// here. Call these from Commands.
 
 	public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
-    	setDefaultCommand(new JoyStickDrive());
-    }
+		// Set the default command for a subsystem here.
+		// setDefaultCommand(new MySpecialCommand());
+		setDefaultCommand(new JoyStickDrive());
+	}
 
 	public Drive() {
 		frontLeft = new Talon(0);
@@ -34,8 +34,10 @@ public class Drive extends Subsystem {
 
 	public void drive(double joystickX, double joystickY, boolean isPrecise,
 			boolean mecanumLeft, boolean mecanumRight) {
-		double speedMultiplier = 1, mecanumMultiplier = 1; //Should never equal 1 during method body
-		
+		double speedMultiplier = 1, mecanumMultiplier = 1; // Should never equal
+															// 1 during method
+															// body
+
 		if (isPrecise) {
 			speedMultiplier = 0.5;
 			mecanumMultiplier = 0.4;
