@@ -19,10 +19,10 @@ public class Drive extends Subsystem {
 	// here. Call these from Commands.
 
 	public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
-    	setDefaultCommand(new JoyStickDrive());
-    }
+		// Set the default command for a subsystem here.
+		// setDefaultCommand(new MySpecialCommand());
+		setDefaultCommand(new JoyStickDrive());
+	}
 
 	public Drive() {
 		frontLeft = new Talon(0);
@@ -32,9 +32,9 @@ public class Drive extends Subsystem {
 		drive = new RobotDrive(frontLeft, rearLeft, frontRight, rearRight);
 	}
 
-	public void drive(double joystickX, double joystickY, boolean isPrecise,
+	public boolean drive(double joystickX, double joystickY, boolean isPrecise,
 			boolean mecanumLeft, boolean mecanumRight) {
-		double speedMultiplier = 1, mecanumMultiplier = 1; //Should never equal 1 during method body
+		if(!isDriving) return false;
 		
 		if (isPrecise) {
 			speedMultiplier = 0.5;
@@ -66,5 +66,35 @@ public class Drive extends Subsystem {
 						* -speedMultiplier);
 			}
 		}
+		
+		return true;
 	}
+	
+	public void setDriving(boolean isDriving){
+		this.isDriving = isDriving;
+	}
+
+	public boolean getDriving(){
+		return isDriving;
+	}
+	
+	public void setFrontLeft(double power){
+		frontLeft.set(power);
+	}
+	
+	public void setFrontRight(double power){
+		frontRight.set(power);
+	}
+	
+	public void setRearLeft(double power){
+		rearLeft.set(power);
+	}
+	
+	public void setRearRight(double power){
+		rearRight.set(power);
+	}
+	
+	boolean isDriving = true;
+	double speedMultiplier = 1, mecanumMultiplier = 1; // Should never equal 1
+														// during method body
 }

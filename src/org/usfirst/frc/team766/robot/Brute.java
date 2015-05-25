@@ -7,6 +7,7 @@ import org.usfirst.frc.team766.robot.commands.CommandBase;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 //This is a random comment
 /**
  * This is a new command based robot.
@@ -52,7 +53,8 @@ public class Brute extends IterativeRobot {
      * You can use it to reset subsystems before shutting down.
      */
     public void disabledInit(){
-
+    	SmartDashboard.putString("Autonomous Mode: ",
+				RobotMap.Autons[RobotMap.autonMode]);
     }
 
     /**

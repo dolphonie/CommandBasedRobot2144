@@ -18,26 +18,26 @@ public class OI {
 			mecanumRight = new JoystickButton(jLeft, 5),
 			openArm = new JoystickButton(jRight, 3),
 			closeArm = new JoystickButton(jRight, 4),
-			cameraReset = new JoystickButton(jRight,1),
-			stopOverride = new JoystickButton(jRight,7);
+			cameraReset = new JoystickButton(jRight, 1),
+			stopOverride = new JoystickButton(jRight, 7);
 
 	public OI() {
 		openArm.whenPressed(new AdjustArm(false));
 		closeArm.whenPressed(new AdjustArm(true));
 	}
-	
-	public double getDriveX(){
+
+	public double getDriveX() {
 		return jLeft.getX();
 	}
-	
-	public double getDriveY(){
+
+	public double getDriveY() {
 		return jLeft.getY();
 	}
-	
-	public double getElevatorY(){
+
+	public double getElevatorY() {
 		return jRight.getY();
 	}
-	
+
 	public boolean getMecanumLeft() {
 		return mecanumLeft.get();
 	}
@@ -49,18 +49,17 @@ public class OI {
 	public boolean getPrecisionMode() {
 		return precisionMode.get();
 	}
-	
-	public boolean getCameraReset(){//Also used in elevator?
+
+	public boolean getCameraReset() {// Also used in elevator?
 		return cameraReset.get();
 	}
-	
-	public boolean getStopOverride(){
+
+	public boolean getStopOverride() {
 		return stopOverride.get();
 	}
-	
-	public int getCameraPOV(){
+
+	public int getCameraPOV() {
 		return jRight.getPOV();
 	}
-	
-	
+
 }
